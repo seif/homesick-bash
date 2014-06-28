@@ -24,8 +24,8 @@ function homesick_update()
     do
         castle=$(basename $castle_path)
         echo -e "${SOL_EMPH}* ${SOL_GREEN}$castle${NO_COLOUR}"
-        homesick pull ${castle}
-        homesick symlink ${castle}
+        homeshick pull ${castle}
+        homeshick symlink ${castle}
     done
 }
 
@@ -43,7 +43,7 @@ function homesick_export()
         git_url=$(git config --get remote.origin.url)
         echo ""
         echo -e "${SOL_EMPH}# ${SOL_GREEN}$castle${NO_COLOUR}"
-        echo homesick clone $git_url; echo homesick symlink $castle
+        echo homeshick clone $git_url; echo homeshick symlink $castle
     done
     popd >/dev/null
 }
